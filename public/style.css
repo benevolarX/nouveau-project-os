@@ -1,0 +1,210 @@
+/** START RESET **/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+audio,
+canvas,
+embed,
+iframe,
+img,
+object,
+picture,
+svg,
+video {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  border: none;
+  vertical-align: middle;
+}
+
+img:not([alt]) {
+  filter: blur(15px);
+}
+
+.hidden,
+[hidden] {
+  display: none;
+}
+
+menu,
+ol,
+ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+[aria-disabled="true"],
+[disabled] {
+  cursor: not-allowed;
+}
+
+/** END RESET **/
+
+
+
+
+
+
+
+
+
+
+
+/** START GLOBAL CUSTUM **/
+
+body {
+  overflow: hidden;
+}
+
+.site {
+  width: 100vw;
+  height: 100vh;
+}
+
+.page {
+  background-color: #eee;
+  width: 100%;
+  height: 100%;
+}
+
+
+/** END GLOBAL CUSTUM **/
+
+
+
+
+
+
+
+
+
+
+/** START HELPER **/
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.no-border {
+  border: none;
+}
+
+.center {
+  text-align: center;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/** END HELPER **/
+
+
+
+
+
+
+
+/** START BUREAU **/
+
+.bureau {
+  display: grid;
+  grid-template-columns: repeat(19, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  background-image: url('./assets/imgs/fond_ecran.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.emplacement-bureau {
+  min-width: 5px;
+  min-height: 5px;
+  padding: 8px;
+}
+
+.logo-bureau {
+  cursor: pointer;
+}
+
+.can-drop {
+  background-color: rgba(0, 200, 0, 0.3);
+}
+
+.cant-drop {
+  background-color: rgba(200, 0, 0, 0.3);
+}
+
+/** barre des taches **/
+
+.barre-windows-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-height: 80px;
+  background: linear-gradient(to right, rgb(11, 21, 67), rgb(13, 23, 69));
+}
+
+.barre-windows-form {
+  display: flex;
+}
+
+.btn-barre-tache {
+  min-width: 70px;
+  max-width: 70px;
+
+  min-height: 70px;
+  max-height: 70px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 5px;
+
+  cursor: pointer;
+}
+
+.div-chercher {
+  background-color: rgb(11, 21, 67);
+  filter: brightness(150%);
+}
+
+.label-chercher {
+  text-align: center;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-chercher {
+  max-height: 100%;
+  width: 15vw;
+  padding: 5px;
+  border: 0;
+  background-color: transparent;
+  color: #fff;
+  caret-color: #fff;
+}
+
+.input-chercher:focus {
+  border: 0;
+}
