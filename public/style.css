@@ -134,13 +134,13 @@ body {
   grid-auto-flow: column;
   grid-template-columns: repeat(19, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  background-image: url('./assets/imgs/fond_ecran3.jpg');
+  background-image: url('./assets/imgs/fond_ecran.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/imgs/fond_ecran3.jpg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/imgs/fond_ecran3.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/imgs/fond_ecran.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/imgs/fond_ecran.jpg', sizingMethod='scale')";
 }
 
 .logo-bureau {
