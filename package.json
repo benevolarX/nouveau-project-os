@@ -1,0 +1,19 @@
+{
+  "name": "nouveau-project-os",
+  "version": "1.0.0",
+  "description": "faux OS pour créer des tutos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benevolarX/nouveau-project-os.git"
+  },
+  "author": "benevolarX",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benevolarX/nouveau-project-os/issues"
+  },
+  "homepage": "https://github.com/benevolarX/nouveau-project-os#readme"
+}
