@@ -36,13 +36,14 @@ const initIconBureau = (src, nom = "") => {
   icon.src = src
   icon.id = nom.replace(' ', '_')
   icon.alt = `logo ${nom}`
+  icon.title = nom
   return icon
 }
 
 const initBureau = () => {
   const bureau = document.getElementById('bureau')
   for (let i = 0; i < 19; i++) {
-    for (let j = 0; j < 11; j++) {
+    for (let j = 0; j < 10; j++) {
       let div = document.createElement('div')
       div.classList.add('emplacement-bureau')
       div.ondragleave = allowLeave
@@ -62,9 +63,14 @@ const initBureau = () => {
 
 }
 
+const initBarreTache = () => {
+  const barre = document.getElementById('barre-tache')
+}
+
 const start = async () => {
-  console.log('start')
+  document.oncontextmenu = e => e.preventDefault()
   initBureau()
+  initBarreTache()
 }
 
 document.addEventListener('readystatechange', () => {

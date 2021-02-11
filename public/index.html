@@ -2,10 +2,11 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OS</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/imgs/winbuntu.png" />
+  <title>WINBUNTU</title>
   <link rel="stylesheet" href="./style.css" />
   <script defer type="module" src="./index.js"></script>
 </head>
@@ -17,21 +18,9 @@
     <div class="page">
       
       <div class="bureau" id="bureau">
-<!--
-        <div class="emplacement-bureau" ondragleave="allowLeave(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
-          <img id="poubelle_verte" class="logo-bureau" draggable="true" ondragstart="drag(event)" src="./assets/imgs/poubelle_verte.png" alt="poubelle verte" />
-        </div>
-
-        <div class="emplacement-bureau" ondragleave="allowLeave(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
-          <img id="poubelle_jaune" class="logo-bureau" draggable="true" ondragstart="drag(event)" src="./assets/imgs/poubelle_jaune.png" alt="poubelle jaune" />
-        </div>
-
-        <div class="emplacement-bureau" ondragleave="allowLeave(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
-          <img id="poubelle_bleu" class="logo-bureau" draggable="true" ondragstart="drag(event)" src="./assets/imgs/poubelle_bleu.png" alt="poubelle bleu" />
-        </div> -->
       </div>
       
-      <footer class="barre-windows-footer">
+      <footer id="barre-tache" class="barre-windows-footer">
         
         <form class="barre-windows-form">
 
@@ -51,9 +40,25 @@
             </li>
 
             <li class="btn-barre-tache">
+              <img class="btn-barre-tache" title="Notes" src="./assets/imgs/notes.png" alt="logo bloc notes" />
+            </li>
+
+            <li class="btn-barre-tache">
+              <img class="btn-barre-tache" title="Gimp" src="./assets/imgs/gimp.png" alt="logo gimp" />
+            </li>
+
+            <li class="btn-barre-tache">
               <img class="btn-barre-tache" title="Internet" src="./assets/imgs/firechrome.png" alt="logo firechrome" />
             </li>
           </ul>
+
+          <div class="heure center">
+            <div>
+              15:40 <br/>
+              11/02/2021
+            </div>
+            
+          </div>
 
         </form>
 

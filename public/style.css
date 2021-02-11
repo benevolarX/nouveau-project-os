@@ -80,6 +80,13 @@ body {
   background-color: #eee;
   width: 100%;
   height: 100%;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 
@@ -124,22 +131,22 @@ body {
 
 .bureau {
   display: grid;
+  grid-auto-flow: column;
   grid-template-columns: repeat(19, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  background-image: url('./assets/imgs/fond_ecran.jpg');
+  background-image: url('./assets/imgs/fond_ecran3.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-}
-
-.emplacement-bureau {
-  min-width: 5px;
-  min-height: 5px;
-  padding: 8px;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/imgs/fond_ecran3.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/imgs/fond_ecran3.jpg', sizingMethod='scale')";
 }
 
 .logo-bureau {
+  padding: 5px;
+  max-height: 100px;
+  max-width: 100px;
   cursor: pointer;
 }
 
@@ -154,23 +161,25 @@ body {
 /** barre des taches **/
 
 .barre-windows-footer {
-  position: absolute;
-  bottom: 0;
+  --barre-tache-max-height: 80px;
   width: 100%;
-  max-height: 80px;
+  max-height: var(--barre-tache-max-height);
   background: linear-gradient(to right, rgb(11, 21, 67), rgb(13, 23, 69));
 }
 
 .barre-windows-form {
   display: flex;
+  align-items: stretch;
+  color: #fff;
+  text-align: center;
 }
 
 .btn-barre-tache {
-  min-width: 70px;
-  max-width: 70px;
+  min-width: var(--barre-tache-max-height);
+  max-width: var(--barre-tache-max-height);
 
-  min-height: 70px;
-  max-height: 70px;
+  min-height: var(--barre-tache-max-height);
+  max-height: var(--barre-tache-max-height);
 
   display: inline-flex;
   align-items: center;
@@ -205,6 +214,14 @@ body {
   caret-color: #fff;
 }
 
-.input-chercher:focus {
-  border: 0;
+.heure {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  bottom: 50%;
+  padding-right: 8px;
 }
