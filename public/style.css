@@ -1,3 +1,7 @@
+:root {
+  --menu-start-position: 0px;
+}
+
 /** START RESET **/
 
 html {
@@ -134,7 +138,7 @@ body {
   grid-auto-flow: column;
   grid-template-columns: repeat(19, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  background-image: url('./assets/imgs/fond_ecran.jpg');
+  background-image: url('./assets/imgs/backgrounds/fond_ecran.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -163,6 +167,7 @@ body {
 .barre-windows-footer {
   --barre-tache-max-height: 80px;
   width: 100%;
+  height: var(--barre-tache-max-height);
   max-height: var(--barre-tache-max-height);
   background: linear-gradient(to right, rgb(11, 21, 67), rgb(13, 23, 69));
 }
@@ -188,10 +193,12 @@ body {
   color: #fff;
   padding: 5px;
 
+  z-index: 40;
   cursor: pointer;
 }
 
 .div-chercher {
+  max-height: var(--barre-tache-max-height);
   background-color: rgb(11, 21, 67);
   filter: brightness(150%);
 }
@@ -214,14 +221,46 @@ body {
   caret-color: #fff;
 }
 
+.grid-icon-barre-tache {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr) auto;
+}
+
 .heure {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  z-index: 50;
+  min-height: var(--barre-tache-max-height);
+  grid-column: -1;
+  grid-row: -1;
+}
+
+/* ********** ***/
+
+.menu-start {
+  display: flex;
+  width: 400px;
+  height: 700px;
   position: absolute;
-  right: 0;
-  top: 50%;
-  bottom: 50%;
-  padding-right: 8px;
+  top: calc(100vh - var(--menu-start-position));
+  z-index: 30;
+  background-color: rgb(10, 100, 200);
+  transition-duration: 0.5s;
+}
+
+.menu-start-icons {
+  max-width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.menu-start-recent-apps {
+  overflow: auto;
+}
+
+.recent-app {
+  min-width: 300px;
+  width: 100%;
+  min-height: 30px;
+  margin-bottom: 5px;
+  background-color: grey;
 }

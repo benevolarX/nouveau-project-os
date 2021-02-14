@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "faux OS pour créer des tutos",
   "main": "index.js",
-
   "type": "module",
   "scripts": {
     "dev": "nodemon src/index.js"
