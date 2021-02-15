@@ -2,10 +2,13 @@
   "name": "nouveau-project-os",
   "version": "1.0.0",
   "description": "faux OS pour créer des tutos",
-  "main": "index.js",
+  "main": "src/server/index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "concurrently -k -n \"client,server\" -p \"[{name}]\" -c \"green,blue\" \"npm run build-client\" \" npm run start-server \"",
+    "start-server": "node src/server/index.js",
+    "build-client": "nodemon --ignore 'public/*' --watch './src/*' --ext js,jsx,ts,tsx --exec 'npm run build' ",
+    "build": "esbuild src/client/index.tsx --jsx-factory=h --jsx-fragment=Fragment --bundle --minify --sourcemap --outfile=/public/build/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +21,10 @@
   },
   "homepage": "https://github.com/benevolarX/nouveau-project-os#readme",
   "dependencies": {
+    "concurrently": "^5.3.0",
+    "esbuild": "^0.8.46",
     "finalhandler": "^1.1.2",
+    "preact": "^10.5.12",
     "serve-static": "^1.14.1"
   }
 }
